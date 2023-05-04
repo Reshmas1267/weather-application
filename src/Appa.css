@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: cursive;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
+    padding: 20px;
+}
+.logo{
+    font-size: 32px;
+}
+.menu{
+    display: flex;
+    gap: 40px;
+}
+input[type=checkbox]{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width:768px){
+    .menu{
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+        /* display: inline; */
+        background-color: teal;
+        top: 14%;
+    }
+    .menu li{
+        padding: 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+}

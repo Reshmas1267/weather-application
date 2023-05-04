@@ -1,0 +1,66 @@
+/* Basic styles for the product grid and item */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Media queries that adjust the number of columns in the product grid based on the screen size */
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  /* Styles for the navigation menu that make it collapsible into a hamburger menu for smaller screen sizes */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #eee;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+  nav .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+  
+    nav .menu-icon
+}
